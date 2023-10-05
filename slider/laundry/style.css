@@ -1,0 +1,243 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 100vh;
+    position: relative;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+nav{
+    height: 150px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.log a img{ 
+   width: 135px;
+}
+nav .log a{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-size: 1.3vw;
+    color: #28057c;
+    opacity: .7;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.nav_list{
+    display: inline-flex;
+    gap: 40px;
+}
+.nav_list li a{
+    font-size: 1.3vw;
+    color: #4f95cf;
+    font-family: 'Montserrat', sans-serif;
+}
+.nav_link   i{
+    margin-right: 10px;
+    color: black;
+    opacity: .5;
+    font-weight: 700;
+}
+.nav_list li button{
+    border: none;
+    color: #4f95cf;
+    font-size: 1.3vw;
+    background-color: transparent;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.hero{
+    height: calc(100% - 150px);
+    width: 100%;
+    position: relative;
+}
+.hero::before{
+        background-color: rgba(114, 111, 111, 0.5);
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+      
+}
+.hero iframe{
+    width: 100%;
+    height: 100%;
+   
+}
+.hero-content{
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-17%, -50%);
+}
+.hero-content h5{
+    font-size:1.2vw;
+    font-weight: 400;
+    color: #4f95cf;
+}
+.hero-content h4{
+    font-size: 1.9vw;
+    margin: 1vw 0;
+    color: #4f95cf;
+    font-weight: 700;
+}
+.hero-content h3{
+    font-size: 2.5vw;
+    font-weight: 400;
+    color: #4f95cf;
+}
+.cta-btn{
+    width: 50%;
+}
+
+.hero-content button{
+    display: block;
+    margin-top: 30px;
+    width: 100%;
+     padding: 1.2vw 1.8vw;
+     border-radius: 15px;
+     background-color:#387ec4 ;
+     font-size: .9vw;
+     border: none;
+     color: #fff;
+     font-weight: 700;
+    
+}
+.hero-content button a{
+    color: #ffff;
+    font-weight: 700;
+    font-size: .9vw;
+}
+section{
+    width: 100%;
+    height: 100vh;
+}
+.info{
+    height: 25vh;
+    width: 100%;
+    background-color:#387ec4 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info h2{
+   font-size: 2.3vw;
+   color: #fff;
+   font-weight: 400;
+  
+}
+.social-Icon{
+    position: fixed; 
+    top: 50%;
+    left: 0px;
+    z-index: 2;
+    display: block;
+    
+}
+.social-Icon i{
+    font-size: 1vw;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    border-radius: 3px;
+    
+  
+}
+.fa-brands{
+    background-color: #387ec4;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+ .social-Icon .fa-solid{
+    background-color: #454343;
+    cursor: pointer;
+}
+.social-Icon .fa-brands:hover{
+    padding-left: 25px;
+}
+.services{
+  display: flex;
+    width: 90%;
+    height: calc(100% - 25vh);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    margin: auto;
+    padding: 0 20vw;
+}
+.services h3{
+    font-size: 1.3vw;
+    font-weight: 700;
+    color: #387ec4;
+    font-family: 'Playfair Display', serif;
+}
+.services-component{
+    display: flex;
+    gap: 5px;
+   
+}
+.services-img{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+   
+}
+.services-img img{
+    width: 500%;
+    height: auto;
+}
+
+ .component-card{
+   padding: 15px 20px;
+   font-family: 'Playfair Display', serif;
+   background-color: #efefef;
+   
+}
+.component-card h3{
+    font-size:1.1vw ;
+    font-weight: 700;
+    margin-bottom: 2.5vw;
+    position: relative;
+
+}
+.component-card h3::after{
+    content: " ";
+    width: 60px;
+    height: 1px;
+    background-color: black;
+    position: absolute;
+    top: 2vw;
+    left: 0;
+}
+.component-card p{
+    font-size: .8vw;
+    font-family: 'Abel', sans-serif;
+    color: #387ec4;
+    opacity: .7;
+}
+
+   
+
+
+
+

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4124c28c8a.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+       
+    /* navbar style  start*/
+
+        nav {
+            width: 100%;
+            height: 70px;
+            background-color: aquamarine;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 50px;   
+        }
+
+        nav h2 {
+            box-shadow: 0 0 15px rgba(255, 255, 2555, 0.5);
+            border-radius: 50%;
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: capitalize;
+            font-family: monospace;
+        }
+        
+        .nav-list{
+            position: relative;
+        }
+
+        .nav-list li {
+            list-style: none;
+            padding: 10px 0;
+        }
+        .nav-list li a {
+            text-decoration: none;
+            font-size: 1vw;
+            color: black;
+            text-transform: uppercase;
+        }
+        .nav-list li a:hover {
+            opacity: .5;
+        }
+
+        .drop-down-list {
+            display: none;
+            position: absolute;
+            top: 59px;
+            right: 0;
+            padding: 10px 20px;
+            transition: 2.5s ease-in-out;
+            background-color: rgba(113, 211, 235, 0.76);
+            min-width: 150px;
+            text-align: left;
+        }
+
+        .drop-down-list li a {
+            text-transform: capitalize;
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 40px;
+        }
+
+        ul li:hover .drop-down-list {
+            display: block;
+        }
+
+        .sec-sub-list {
+            display: none;
+            position: absolute;
+            top: 130px;
+            right: 180px;
+            min-width: 200px;
+            padding: 10px 20px;
+            background-color: rgba(113, 211, 235, 0.76);
+            text-align: left;
+        }
+        .sec-sub i,
+        .drop-down i{
+            margin-left: 10px;
+        }
+
+        .sec-sub:hover .sec-sub-list {
+            display: block;
+        }
+
+        .bars {
+            display: none;
+            cursor: pointer;
+        }
+
+        .bar {
+            width: 30px;
+            height: 5px;
+            background-color: brown;
+            border-radius: 2px;
+            display: block;
+
+        }
+
+        .bar:nth-child(2) {
+            margin: 3px 0;
+        }
+        /* navbar style end */
+        .banner{
+            background-image: url(./laundry-saloon.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 40px;
+        }
+        .banner h2{
+            font-size: 5vw;
+            color: rgb(0, 0, 0);
+            width: 65%;
+            text-shadow:  1px 5px 0px rgba(255, 255, 2555, 1);
+            -webkit-text-stroke: 3px #471f1f;
+            color: #f1f1f1;
+          
+            line-height: 4.5vw;
+            font-family: monospace;
+        }
+        nav a{
+            text-decoration: none;
+        }
+        nav a button{
+            display: block;
+            padding: .5vw 1vw;
+            font-size:.8vw;
+            font-weight: 900;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            border-radius: 12px;
+            box-shadow: 0 0 5px #fff;
+            text-transform: uppercase;
+         
+
+
+            
+        }
+        .about{
+            height: 100vh;
+            width: 100%;
+            /* background-color: bisque; */
+            padding: 50px;
+            display: flex;
+            gap: 20px;
+        }
+        .about-content{
+            min-width: 1000px;
+            margin: 0 auto;
+            width: 50%;
+        }
+        .about-img{
+            width: 50%;
+        }
+        .about-img img{
+            width: 100%;
+            border-radius: 30px;
+        }
+        .about-content h1{
+            font-size: 5vw;
+            line-height: 4vw;
+            margin-top: 20px;
+            margin-bottom: 4vw;
+            color: #000000;
+        }
+        .about-content p{
+            font-size: 1.2vw;
+            color: #0e0d0d5c;
+            letter-spacing: 1.8px;
+            
+        }
+
+        .bars.active {
+            .bar:nth-child(2) {
+                opacity: 0;
+            }
+
+            .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+
+            .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+        }
+
+        @media (max-width:800px) {
+            .bars {
+                display: block;
+            }
+            .bar:nth-child(2).active {
+                opacity: 0;
+            }
+            .bar:nth-child(1).active {
+                transform: translateY(8px) rotate(45deg);
+            }
+
+            .bar:nth-child(3).active {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+
+            .nav-list.active {
+                position: fixed;
+                top: 70px;
+                right: 0;
+                width: 50%;
+                background-color: rgba(113, 211, 235, 0.76);
+                display: block;
+                text-align: center;
+                height: 100vh;
+            }
+            .nav-list {
+                display: none;
+            }
+            .sec-sub-list {
+                top: 140px;
+            }
+            .drop-down-list {
+                top: 130px;
+            }
+            .nav-list li a {
+                font-size: 25px;
+            }
+            li {
+                padding: 10px 0;
+            }
+            nav a button{
+                padding: 1.2vw 2.4vw;
+                font-size: 1.5vw;
+
+           }
+           .about-content{
+              width: 100%;
+            }
+            .banner h2{
+                font-size: 7vw;
+                text-shadow:  .5px .5px 0px rgba(255, 255, 2555, 0.5);
+                -webkit-text-stroke: 0px #471f1f;
+                line-height: 7vw;
+                color: #000;
+            
+           
+             }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <h2>logo</h2>
+       
+        <ul class="nav-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li class="drop-down">
+                <a href="#">Services</a><i class="fa-solid fa-caret-down"></i>
+                <ul class="drop-down-list">
+                    <li><a href="#">Laudry</a></li>
+                    <li><a href="#">Dry Cleanning</a></li>
+                    <li class="sec-sub">
+                        <a href="#">Washing</a><i class="fa-solid fa-caret-down"></i>
+                        <ul class="sec-sub-list">
+                            <li><a href="#">Dry Wash</a></li>
+                            <li><a href="#">Sampoo Wash</a></li>
+                            <li><a href="#">Bleaching</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <a href="tel:+977 9841645585"> <button>Call Us</button></a>
+        <div class="bars">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+    <div class="banner">
+        <h2>Days are no longer measured in hours but in miles completed and laundry baskets filled.</h2>
+       
+    </div>
+    <div class="about">
+        <div class="about-content">
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, rerum.</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, quisquam dolores aliquid vitae aspernatur
+                magnam debitis necessitatibus beatae magni maxime consequatur, quibusdam pariatur asperiores id unde
+                quas veritatis doloremque facilis recusandae. Consequatur ab temporibus et, cupiditate, enim autem amet
+                totam facere quia, vitae earum veritatis quaerat blanditiis minima dolor libero in delectus culpa!
+                Repellat a totam repudiandae deserunt corrupti beatae possimus ducimus neque, ea harum, nobis aliquam
+                doloremque quae aliquid quas. Eius optio cum reiciendis eveniet consequuntur aliquam et exercitationem
+                esse. Vitae, molestiae. Exercitationem optio nihil excepturi aliquid minus asperiores nostrum rem quasi
+                dolorum ducimus quis aliquam, at ipsa a.</p>
+        </div>
+        <div class="about-img">
+            <img src="https://media.gettyimages.com/id/459292777/photo/laundry-service.jpg?s=2048x2048&w=gi&k=20&c=z4RVyM5RK_2I6zGLhyV-HR1EMQ9Gf-iIMKIUgZOm1Hg=" alt="">
+        </div>
+    </div>
+    <script>
+        const navList = document.querySelector(".nav-list");
+        const bars = document.querySelector(".bars");
+
+        bars.addEventListener("click", function () {
+            navList.classList.toggle("active");
+            bars.classList.toggle("active");
+
+
+        })
+
+    </script>
+
+</body>
+
+</html>
